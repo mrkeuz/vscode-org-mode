@@ -97,6 +97,10 @@
             {
                 "command": "org.butterfly",
                 "title": "Org: Butterfly"
+            },
+            {
+                "command": "org.toggleCheckbox",
+                "title": "Org: Toggle Checkbox"
             }
         ],
         "languages": [
@@ -244,6 +248,11 @@
             {
                 "command": "org.literal",
                 "key": "ctrl+alt+o l",
+                "when": "editorLangId == 'org'"
+            },
+            {
+                "command": "org.toggleCheckbox",
+                "key": "alt+enter",
                 "when": "editorLangId == 'org'"
             }
         ]

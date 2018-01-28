@@ -4,6 +4,8 @@ import * as HeaderFunctions from './header-functions';
 import * as TimestampFunctions from './timestamp-functions';
 import * as MarkupFunctions from './markup-functions';
 import * as SubtreeFunctions from './subtree-functions';
+import * as CheckboxFunctions from './checkboxes';
+
 import {
     incrementContext,
     decrementContext
@@ -22,6 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
     let clockInCmd = vscode.commands.registerTextEditorCommand('org.clockin', TimestampFunctions.clockIn);
     let clockOutCmd = vscode.commands.registerTextEditorCommand('org.clockout', TimestampFunctions.clockOut);
     let updateClockCmd = vscode.commands.registerTextEditorCommand('org.updateclock', TimestampFunctions.updateClock);
+    let toggleCheckbox = vscode.commands.registerTextEditorCommand('org.toggleCheckbox', CheckboxFunctions.toggle);
 
     let incrementContextCmd = vscode.commands.registerTextEditorCommand('org.incrementContext', incrementContext);
 
